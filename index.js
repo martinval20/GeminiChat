@@ -19,7 +19,7 @@ async function runTextGenerator(){
     const text = response.text()
     console.log(text)
 }
-async function runVisionComparation(){
+async function runVisionComparison(){
     const visionModel = genAI.getGenerativeModel({ model: "gemini-pro-vision"})
     const prompt = "What's different between these Pictures?"
     const imageParts = [
@@ -52,7 +52,7 @@ async function runChatText(){
     console.log(text)
 }
 
-async function runEmedding(){
+async function runEmbedding(){
     const model = genAI.getGenerativeModel({ model: "embedding-001"})
     const text = "The quick brown fox jumped over the lazy dog"
 
@@ -60,4 +60,9 @@ async function runEmedding(){
     const embedding = result.embedding
     console.log(embedding)
 }
-runEmedding()
+/*
+runTextGenerator()
+runVisionComparison()
+runChatText()
+runEmbedding()
+*/
